@@ -34,6 +34,7 @@ export default function LoginPage() {
           theme="dark"
           providers={[]}
           redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`}
+          view="sign_in"
         />
       </div>
     </div>
