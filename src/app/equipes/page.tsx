@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabaseClient'
 export const revalidate = 60 // Revalidate data every 60 seconds
 
 async function getTeams() {
-  const { data: equipes, error } = await supabase.from('Equipes').select('nom')
+  const { data: equipes, error } = await supabase.from('equipes').select('nom')
 
   if (error) {
     console.error('Error fetching teams:', error)
