@@ -8,7 +8,14 @@ export async function GET(request: Request) {
 
   if (code) {
     const supabase = createRouteHandlerClient({ cookies })
-    await supabase.auth.exchangeCodeForSession(code)
+    try {
+      await supabase.auth.exchangeCodeForSession(code)
+    } catch (error) {
+      // Redirect to login page with error parameter if exchange fails
+      const loginUrl = new URL('/login', requestUrl.origin)
+      loginUrl.searchParams.set('error', 'auth_callback')
+      return NextResponse.redirect(loginUrl.toString())
+    }
   }
 
   // URL to redirect to after sign in process completes
