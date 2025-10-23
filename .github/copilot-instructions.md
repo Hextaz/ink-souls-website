@@ -1,0 +1,2 @@
+- Project scaffold for Ink Souls website. Use App Router under `src/app` and TypeScript.
+- Do not modify project root except for `README.md` and `.eslintrc.json` unless asked.

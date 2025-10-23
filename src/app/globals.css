@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+
+/* Placeholder for ink-splatter styles */
+.body-ink {
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,0,128,0.08), transparent 15%), radial-gradient(circle at 80% 80%, rgba(0,200,255,0.06), transparent 20%);
+}
