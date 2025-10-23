@@ -14,8 +14,6 @@ export default function LoginPage() {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'SIGNED_IN') {
         router.push('/admin/dashboard')
-        // On refresh, the router might not be ready, so we force a reload
-        router.refresh()
       }
     })
 
