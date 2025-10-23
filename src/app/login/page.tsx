@@ -33,7 +33,7 @@ export default function LoginPage() {
           appearance={{ theme: ThemeSupa, variables: { default: { colors: { brand: '#8B5CF6', brandAccent: '#7C3AED' } } } }}
           theme="dark"
           providers={[]}
-          redirectTo={`${window.location.origin}/auth/callback`}
+          redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`}
         />
       </div>
     </div>
