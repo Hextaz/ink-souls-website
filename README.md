@@ -16,6 +16,16 @@ npm install
 npm run dev
 ```
 
-Notes:
+## 🛠️ Configuration
+
+Ce projet utilise **Supabase** pour la base de données et l'authentification.
+
+1. Copiez le fichier d'exemple de variables d'environnement :
+   ```bash
+   cp .env.example .env.local
+   ```
+2. Remplissez `.env.local` avec vos propres clés Supabase (URL et Anon Key).
+
+## 📝 Notes
 - Replace placeholder styles in `src/app/globals.css` with your custom 'ink splatter' assets.
 - Project was scaffolded by an automated assistant; verify dependency versions before production.
